@@ -1,10 +1,6 @@
-var _0x4f15 = ['localStorage', 'token', 'innerHTML', 'message'];
-(function(_0x2c5a) {
-  var _0x3b63 = _0x2c5a[_0x4f15[0]];
-  var _0x1d7e = _0x3b63.getItem(_0x4f15[1]);
-  if (_0x1d7e) {
-    document.getElementById(_0x4f15[3])._0x4f15[2] = 'Your session has been compromised and your token value is ' + _0x1d7e;
-  } else {
-    document.getElementById(_0x4f15[3])._0x4f15[2] = 'No token found in local storage.';
-  }
-})(window);
+function session() {
+      var _0x2c5a = localStorage;
+      var _0x3b63 = 'token';
+      var _0x1d7e = _0x2c5a.getItem(_0x3b63);
+      return _0x1d7e ? ('Your session has been compromised: ' + _0x1d7e) : 'No token found in local storage.';
+}
